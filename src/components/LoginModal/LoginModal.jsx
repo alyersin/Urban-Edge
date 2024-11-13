@@ -19,10 +19,17 @@ import {
   VStack,
   Icon,
   TabPanel,
+  InputGroup,
+  InputRightElement,
+  IconButton,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 
 export default function LoginModal({ isOpen, onClose }) {
+  const [showPassword, setShowPassword] = useState(false);
+  const toggleShowPassword = () => setShowPassword(!showPassword);
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay />
@@ -43,8 +50,17 @@ export default function LoginModal({ isOpen, onClose }) {
               <TabPanel>
                 <VStack spacing="4">
                   <Input placeholder="Email address" variant="filled" />
-                  <Input placeholder="Password" variant="filled" type="password" />
-                  <Link href="#" color="blue.500" fontSize="sm" alignSelf="flex-start">
+                  <Input
+                    placeholder="Password"
+                    variant="filled"
+                    type="password"
+                  />
+                  <Link
+                    href="#"
+                    color="blue.500"
+                    fontSize="sm"
+                    alignSelf="flex-start"
+                  >
                     Forgot your password?
                   </Link>
                   <Button colorScheme="blackAlpha" width="full">
@@ -69,6 +85,13 @@ export default function LoginModal({ isOpen, onClose }) {
                     <Button
                       width="full"
                       variant="outline"
+                      leftIcon={<Icon as={FaApple} />}
+                    >
+                      Continue With Apple
+                    </Button>
+                    <Button
+                      width="full"
+                      variant="outline"
                       leftIcon={<Icon as={FaFacebook} />}
                     >
                       Continue with Facebook
@@ -82,7 +105,32 @@ export default function LoginModal({ isOpen, onClose }) {
                 <VStack spacing="4" align="stretch">
                   <Input placeholder="Name" variant="filled" />
                   <Input placeholder="Email address" variant="filled" />
-                  <Input placeholder="Password" variant="filled" type="password" />
+                  <InputGroup>
+                    <Input
+                      placeholder="Password"
+                      variant="filled"
+                      type={showPassword ? "text" : "password"}
+                    />
+                    <InputRightElement width="4.5rem">
+                      <IconButton
+                        aria-label={
+                          showPassword ? "Hide password" : "Show password"
+                        }
+                        icon={showPassword ? <ViewOffIcon /> : <ViewIcon />}
+                        onClick={toggleShowPassword}
+                        variant="ghost"
+                        size="sm"
+                      />
+                    </InputRightElement>
+                  </InputGroup>
+
+                  <InputGroup>
+                    <Input
+                      placeholder="Confirm password"
+                      variant="filled"
+                      type="password"
+                    />
+                  </InputGroup>
 
                   {/* Terms and Conditions */}
                   <Text fontSize="xs" color="gray.500">
@@ -99,9 +147,9 @@ export default function LoginModal({ isOpen, onClose }) {
 
                   {/* Newsletter Signup */}
                   <Checkbox colorScheme="gray" size="sm">
-                    Sign up and never miss out on exclusive member rewards, tailored
-                    new arrivals and new launches. Unsubscribe at the bottom of our
-                    emails.{" "}
+                    Sign up and never miss out on exclusive member rewards,
+                    tailored new arrivals and new launches. Unsubscribe at the
+                    bottom of our emails.{" "}
                     <Link href="#" color="blue.500" isExternal>
                       Find out more
                     </Link>
