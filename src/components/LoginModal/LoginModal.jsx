@@ -102,7 +102,7 @@ export default function LoginModal({ isOpen, onClose }) {
 
               {/* I'M NEW HERE PANEL */}
               <TabPanel>
-                <VStack spacing="4" align="stretch">
+                <VStack spacing="4" align="stretch" textAlign="center">
                   <Input placeholder="Name" variant="filled" />
                   <Input placeholder="Email address" variant="filled" />
                   <InputGroup>
@@ -133,7 +133,7 @@ export default function LoginModal({ isOpen, onClose }) {
                   </InputGroup>
 
                   {/* Terms and Conditions */}
-                  <Text fontSize="xs" color="gray.500">
+                  <Text textAlign="left" fontSize="xs" color="gray.500">
                     By registering, you agree to our{" "}
                     <Link href="#" color="blue.500" isExternal>
                       Terms & Conditions
@@ -146,10 +146,15 @@ export default function LoginModal({ isOpen, onClose }) {
                   </Text>
 
                   {/* Newsletter Signup */}
-                  <Checkbox colorScheme="gray" size="sm">
-                    Sign up and never miss out on exclusive member rewards,
-                    tailored new arrivals and new launches. Unsubscribe at the
-                    bottom of our emails.{" "}
+                  <Checkbox textAlign="left" colorScheme="gray" size="sm">
+                    <Text fontSize="xs">
+                      Sign up and never miss out on exclusive member rewards,
+                      tailored new arrivals and new launches.
+                    </Text>
+                    <Text fontSize="xs">
+                      {" "}
+                      Unsubscribe at the bottom of our emails.{" "}
+                    </Text>
                     <Link href="#" color="blue.500" isExternal>
                       Find out more
                     </Link>

@@ -1,9 +1,10 @@
+import React from "react";
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import DepartmentCard from "@/components/DepartmentCard/DepartmentCard";
 
-export default function Home() {
+export default function Main() {
   return (
-    <Box textAlign="center">
+    <div>
       <Heading mb={8}>Choose a department</Heading>
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
@@ -26,6 +27,6 @@ export default function Home() {
           link="/Pages/Kids"
         />
       </SimpleGrid>
-    </Box>
+    </div>
   );
 }

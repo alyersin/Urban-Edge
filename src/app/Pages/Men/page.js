@@ -1,15 +1,22 @@
-import Header from "@/components/Header/Header.jsx";
-import { Button, Link } from "@chakra-ui/react";
-import React from "react";
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
-export default function page() {
+export default function Men() {
   return (
-    <div>
-      <Header />
-      Men
-      <Link href="/">
-        <Button>GO BACK</Button>
-      </Link>
-    </div>
+    <Box>
+      <Heading mb={8}>Men's Collection</Heading>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+        {/* Replace these with actual product cards or components */}
+        <Box border="1px solid gray" padding="4">
+          <Text>Men's Item 1</Text>
+        </Box>
+        <Box border="1px solid gray" padding="4">
+          <Text>Men's Item 2</Text>
+        </Box>
+        <Box border="1px solid gray" padding="4">
+          <Text>Men's Item 3</Text>
+        </Box>
+        {/* Add more items as needed */}
+      </SimpleGrid>
+    </Box>
   );
 }
