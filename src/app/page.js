@@ -4,24 +4,26 @@ import DepartmentCard from "@/components/DepartmentCard/DepartmentCard";
 export default function Home() {
   return (
     <Box textAlign="center">
-      <Heading mb={8}>Choose a department</Heading>
+      <Heading mb={8} fontSize="1.6rem">
+        Choose a department
+      </Heading>
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
         spacing={6}
         justifyItems="center"
       >
         <DepartmentCard
-          image="/path/to/womenswear.jpg"
+          image="/assets/womenswear.jpg"
           title="WOMENSWEAR"
           link="/Pages/Women"
         />
         <DepartmentCard
-          image="/path/to/menswear.jpg"
+          image="/assets/menswear.jpg"
           title="MENSWEAR"
           link="/Pages/Men"
         />
         <DepartmentCard
-          image="/path/to/kidswear.jpg"
+          image="/assets/kidswear.jpg"
           title="KIDSWEAR"
           link="/Pages/Kids"
         />

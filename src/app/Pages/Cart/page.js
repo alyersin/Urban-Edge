@@ -4,7 +4,7 @@ import React from "react";
 export default function page() {
   return (
     <div>
-      Men
+      CART
       <Link href="/">
         <Button>GO BACK</Button>
       </Link>

@@ -1,3 +1,5 @@
+// src/components/DepartmentCard/DepartmentCard.jsx
+
 import { Box, Image, Text, Link } from "@chakra-ui/react";
 
 export default function DepartmentCard({ image, title, link }) {
@@ -6,8 +8,8 @@ export default function DepartmentCard({ image, title, link }) {
       <Box
         position="relative"
         width="100%"
-        maxWidth="320px"
-        height="400px"
+        maxWidth="400px" // Increase width for a more landscape view
+        height="250px" // Reduce height for a landscape view
         overflow="hidden"
         borderRadius="lg"
         boxShadow="md"
@@ -18,7 +20,7 @@ export default function DepartmentCard({ image, title, link }) {
           alt={title}
           width="100%"
           height="100%"
-          objectFit="cover"
+          objectFit="cover" // Keep "cover" to maintain aspect ratio within the landscape card
         />
         <Box
           position="absolute"
