@@ -10,6 +10,10 @@ import {
   InputGroup,
   InputLeftElement,
   Input,
+  Tabs,
+  TabList,
+  Tab,
+  TabIndicator,
   Divider,
 } from "@chakra-ui/react";
 import { FaGlobe, FaRegUser, FaRegHeart } from "react-icons/fa";
@@ -34,18 +38,34 @@ export default function Header() {
           mx="auto"
           paddingX={{ base: "10px", md: "40px" }}
         >
-          {/* LEFT SECTION */}
-          <HStack spacing={6}>
-            <Link href="/Pages/Women">
-              <Text>Women</Text>
-            </Link>
-            <Link href="/Pages/Men">
-              <Text>Men</Text>
-            </Link>
-            <Link href="/Pages/Kids">
-              <Text>Kids</Text>
-            </Link>
-          </HStack>
+          {/* LEFT SECTION - Tabs for Women, Men, Kids */}
+          <Tabs variant="unstyled" position="relative">
+            <TabList>
+              <Tab>
+                <Link href="/Pages/Women">
+                  <Text>Women</Text>
+                </Link>
+              </Tab>
+              <Tab>
+                <Link href="/Pages/Men">
+                  <Text>Men</Text>
+                </Link>
+              </Tab>
+              <Tab>
+                <Link href="/Pages/Kids">
+                  <Text>Kids</Text>
+                </Link>
+              </Tab>
+            </TabList>
+            {/* TabIndicator positioned on top of the Divider */}
+            <TabIndicator
+              position="absolute"
+              bottom="-10px" /* Adjust this value to place it directly on the Divider */
+              height="2px"
+              bg="black"
+              borderRadius="md"
+            />
+          </Tabs>
 
           {/* CENTER LOGO */}
           <Link href="/">
@@ -103,8 +123,7 @@ export default function Header() {
             </Tooltip>
           </HStack>
         </Box>
-        <Divider></Divider>
-        {/* SEARCH INPUT */}
+        <Divider mt="0px" /> {/* SEARCH INPUT */}
         <Box
           display="flex"
           justifyContent="flex-end"
@@ -113,7 +132,7 @@ export default function Header() {
           paddingX={{ base: "10px", md: "40px" }}
           mt="10px"
         >
-          <InputGroup width="260px" /* Adjust width as needed */>
+          <InputGroup width="260px">
             <InputLeftElement pointerEvents="none">
               <SearchIcon color="gray.400" />
             </InputLeftElement>
@@ -127,7 +146,6 @@ export default function Header() {
             />
           </InputGroup>
         </Box>
-
         {/* LOGINMODAL COMPONENT */}
         <LoginModal isOpen={isOpen} onClose={onClose} />
       </Box>

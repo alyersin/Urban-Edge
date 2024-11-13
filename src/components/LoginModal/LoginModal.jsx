@@ -132,7 +132,7 @@ export default function LoginModal({ isOpen, onClose }) {
                     />
                   </InputGroup>
 
-                  {/* Terms and Conditions */}
+                  {/* TERMS */}
                   <Text textAlign="left" fontSize="xs" color="gray.500">
                     By registering, you agree to our{" "}
                     <Link href="#" color="blue.500" isExternal>
@@ -145,7 +145,7 @@ export default function LoginModal({ isOpen, onClose }) {
                     , and to join our loyalty programme.
                   </Text>
 
-                  {/* Newsletter Signup */}
+                  {/* NEWSLETTER */}
                   <Checkbox textAlign="left" colorScheme="gray" size="sm">
                     <Text fontSize="xs">
                       Sign up and never miss out on exclusive member rewards,
@@ -167,7 +167,7 @@ export default function LoginModal({ isOpen, onClose }) {
                     OR
                   </Text>
 
-                  {/* Social Media Registration Buttons */}
+                  {/* SOCIAL MEDIA REGISTRATION */}
                   <VStack spacing="2" width="full">
                     <Button
                       width="full"

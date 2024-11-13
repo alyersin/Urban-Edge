@@ -7,10 +7,10 @@ export default function InfoCard({ icon, title, description, href }) {
     <Link href={href} passHref>
       <Box
         width="100%"
-        maxWidth="400px" // Matches DepartmentCard's maxWidth
+        maxWidth="400px"
         border="1px solid"
         borderColor="gray.300"
-        borderRadius="lg" // Matches DepartmentCard's borderRadius
+        borderRadius="lg"
         padding={4}
         textAlign="left"
         transition="all 0.3s ease"

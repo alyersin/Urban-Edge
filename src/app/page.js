@@ -18,7 +18,7 @@ export default function Home() {
       textAlign="center"
       p={4}
     >
-      <Heading mb={8} fontSize="1.6rem">
+      <Heading mb={8} fontSize="1.6rem" fontWeight="500" opacity="70%">
         Choose a department
       </Heading>
 
