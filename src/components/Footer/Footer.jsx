@@ -6,13 +6,13 @@ import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Box as="footer" width="100%" bg="#b4b4b6" color="black" paddingY="16px">
+    <Box as="footer" width="100%" bg="#b4b4b6" color="black" py="16px">
       <Box
         maxWidth="1280px"
         mx="auto"
         textAlign="center"
-        paddingX="10px"
-        padding="14px 0 34px 0"
+        px="10px"
+        py="14px 0 34px 0"
       >
         <Box display="inline-block" mb={2} lineHeight="1" position="relative">
           <Text
@@ -28,16 +28,18 @@ export default function Footer() {
             EDGE
           </Text>
         </Box>
-
-        <Text fontSize="xs" mb="8px">
+        {/* <Text fontSize="xs" mb="8px">
           &copy; {new Date().getFullYear()} All rights reserved.
-        </Text>
-
+        </Text> */}
+        {/* SOCIAL MEDIA LINKS */}
         <HStack justify="center" spacing="20px">
           <Link href="https://github.com/alyersin" isExternal>
             <Icon as={FaGithub} boxSize="5" _hover={{ color: "gray.400" }} />
           </Link>
-          <Link href="https://www.linkedin.com/in/ersin-ali-228301107/">
+          <Link
+            href="https://www.linkedin.com/in/ersin-ali-228301107/"
+            isExternal
+          >
             <Icon as={FaLinkedin} boxSize="5" _hover={{ color: "blue.400" }} />
           </Link>
           <Link href="https://www.facebook.com/aly.ersin" isExternal>
@@ -48,33 +50,50 @@ export default function Footer() {
           </Link>
         </HStack>
       </Box>
-
-      <Divider borderColor="white"></Divider>
-
-      <Box display="flex" flexDirection="row" gap="28px">
-        <Link>
-          <Text>Privacy policy</Text>
+      {/* DIVIDER */}
+      <Divider borderColor="white" padding="16px 0 0 0" />
+      {/* Footer Links */}
+      <Box
+        display="flex"
+        flexDirection="row"
+        flexWrap="wrap"
+        gap="26px"
+        justifyContent="center"
+        alignItems="center"
+        maxWidth="1280px"
+        mx="auto"
+        py="7"
+        px={{ base: "10px", md: "40px" }}
+      >
+        <Link href="#" textDecoration="underline">
+          <Text>Privacy Policy</Text>
         </Link>
-        <Link>
-          <Text>Terms and conditions</Text>
+        <Link href="#" textDecoration="underline">
+          <Text>Terms and Conditions</Text>
         </Link>
-        <Link>
-          <Text>Accessiblity</Text>
+        <Link href="#" textDecoration="underline">
+          <Text>Accessibility</Text>
         </Link>
-        <Link>
+        <Link href="#" textDecoration="underline">
           <Text>Sitemap</Text>
         </Link>
-        <Link>
-          <Text>Sitemap</Text>
-        </Link>
-        <Link>
+        <Link href="#" textDecoration="underline">
           <Text>Protection of Intellectual Property</Text>
         </Link>
       </Box>
-      <Text>
-        'URBAN EDGE' and the 'URBAN EDGE' logo are trade marks of URBAN EDGE RO
+      {/* DISCLAIMER */}
+      <Text
+        maxWidth="1280px"
+        mx="auto"
+        px={{ base: "10px", md: "40px" }}
+        textAlign="center"
+        fontSize="xs"
+        mt={4}
+      >
+        'URBAN EDGE' and the 'URBAN EDGE' logo are trademarks of URBAN EDGE RO
         Limited and are registered in numerous jurisdictions around the world. ©
-        Copyright 2024 URBAN EDGE RO Limited. All rights reserved.
+        Copyright {new Date().getFullYear()} URBAN EDGE RO Limited. All rights
+        reserved.
       </Text>
     </Box>
   );

@@ -18,7 +18,7 @@ export default function Home() {
       textAlign="center"
       p={4}
     >
-      <Heading mb={8} fontSize="1.6rem" fontWeight="500" opacity="70%">
+      <Heading mb={8} py={6} fontSize="1.6rem" fontWeight="500" opacity="70%">
         Choose a department
       </Heading>
 
@@ -28,7 +28,7 @@ export default function Home() {
         justifyItems="center"
       >
         {/* Column 1 */}
-        <VStack spacing={40}>
+        <VStack spacing={60} py={3}>
           <DepartmentCard
             image="/assets/womenswear.jpg"
             title="WOMENSWEAR"
@@ -43,7 +43,7 @@ export default function Home() {
         </VStack>
 
         {/* Column 2 */}
-        <VStack spacing={40}>
+        <VStack spacing={60} py={3}>
           <DepartmentCard
             image="/assets/menswear.jpg"
             title="MENSWEAR"
@@ -58,7 +58,7 @@ export default function Home() {
         </VStack>
 
         {/* Column 3 */}
-        <VStack spacing={40}>
+        <VStack spacing={60} py={3}>
           <DepartmentCard
             image="/assets/kidswear.jpg"
             title="KIDSWEAR"

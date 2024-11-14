@@ -38,29 +38,40 @@ export default function Header() {
           mx="auto"
           paddingX={{ base: "10px", md: "40px" }}
         >
-          {/* LEFT SECTION - Tabs for Women, Men, Kids */}
+          {/* LEFT SECTION */}
           <Tabs variant="unstyled" position="relative">
             <TabList>
               <Tab>
-                <Link href="/Pages/Women">
+                <Link
+                  href="/Pages/Women"
+                  prefetch={true}
+                  onClick={() => console.log("Navigating to women")}
+                >
                   <Text>Women</Text>
                 </Link>
               </Tab>
               <Tab>
-                <Link href="/Pages/Men">
+                <Link
+                  href="/Pages/Men"
+                  prefetch={true}
+                  onClick={() => console.log("Navigating to men")}
+                >
                   <Text>Men</Text>
                 </Link>
               </Tab>
               <Tab>
-                <Link href="/Pages/Kids">
+                <Link
+                  href="/Pages/Kids"
+                  prefetch={true}
+                  onClick={() => console.log("Navigating to kids")}
+                >
                   <Text>Kids</Text>
                 </Link>
               </Tab>
             </TabList>
-            {/* TabIndicator positioned on top of the Divider */}
             <TabIndicator
               position="absolute"
-              bottom="-10px" /* Adjust this value to place it directly on the Divider */
+              bottom="-10px"
               height="2px"
               bg="black"
               borderRadius="md"
@@ -123,8 +134,10 @@ export default function Header() {
             </Tooltip>
           </HStack>
         </Box>
-        <Divider mt="0px" /> {/* SEARCH INPUT */}
+        <Divider mt="0px" />
+        {/* SEARCH INPUT */}
         <Box
+          // border="1px solid black"
           display="flex"
           justifyContent="flex-end"
           maxWidth="1280px"
