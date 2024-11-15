@@ -1,6 +1,7 @@
 "use client";
-import BlackBar from "@/components/BlackBar/BlackBar";
-import Carousel from "@/components/Carousel/Carousel";
+import BlackBar from "@/components/BlackBar/BlackBar.jsx";
+
+import Carousel from "@/components/Carousel/Carousel.jsx";
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
 export default function Women() {
@@ -38,9 +39,9 @@ export default function Women() {
         alignItems="center"
         maxWidth="1280px"
         width="100%"
-        mx="auto" // Centers horizontally within the viewport
-        textAlign="center" // Centers the text content inside
-        py={8} // Adds vertical padding for spacing
+        mx="auto"
+        textAlign="center"
+        py={8}
       >
         <Heading mb={8}>Women's Collection</Heading>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6} width="100%">
@@ -54,7 +55,6 @@ export default function Women() {
           <Box border="1px solid gray" padding="4">
             <Text>Women's Item 3</Text>
           </Box>
-          {/* Add more items as needed */}
         </SimpleGrid>
       </Box>
     </>

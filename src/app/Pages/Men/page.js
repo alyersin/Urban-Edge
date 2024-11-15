@@ -1,42 +1,62 @@
 "use client";
-import { Box, Heading, SimpleGrid, Text, Icon } from "@chakra-ui/react";
-import { FaTools } from "react-icons/fa";
+import BlackBar from "@/components/BlackBar/BlackBar.jsx";
+import Carousel from "@/components/Carousel/Carousel.jsx";
+
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
 export default function Men() {
+  const images = [
+    {
+      src: "/assets/men/carousel-1.jpg",
+      captionSmall: "LA INTERSECȚIA DINTRE LUX ȘI RELAXARE",
+      captionLarge: "Pregătită pentru orice ocazie",
+      buttonText: "Explorează",
+    },
+    {
+      src: "/assets/men/carousel-2.jpg",
+      captionSmall: "STIL ȘI COMFORT",
+      captionLarge: "Piese esențiale pentru orice garderobă",
+      buttonText: "Explorează",
+    },
+    {
+      src: "/assets/men/carousel-3.jpg",
+      captionSmall: "MODERNITATE ȘI ELEGANȚĂ",
+      captionLarge: "Descoperă noua colecție de toamnă!",
+      buttonText: "Explorează",
+    },
+  ];
+
   return (
-    <Box>
-      <Heading mb={8}>Men's Collection</Heading>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
-        {/* Replace these with actual product cards or components */}
-        <Box border="1px solid gray" padding="4">
-          <Text>Men's Item 1</Text>
-        </Box>
-        <Box border="1px solid gray" padding="4">
-          <Text>Men's Item 2</Text>
-        </Box>
-        <Box border="1px solid gray" padding="4">
-          <Text>Men's Item 3</Text>
-        </Box>
-        {/* Add more items as needed */}
-      </SimpleGrid>
+    <>
+      <Box>
+        <BlackBar />
+        <Carousel images={images} />
+      </Box>
       <Box
         display="flex"
         flexDirection="column"
-        alignItems="center"
         justifyContent="center"
-        minHeight="100vh"
+        alignItems="center"
+        maxWidth="1280px"
+        width="100%"
+        mx="auto"
         textAlign="center"
-        bg="gray.50"
-        p={4}
+        py={8}
       >
-        <Icon as={FaTools} boxSize={12} color="orange.400" mb={4} />
-        <Text fontSize="3xl" fontWeight="bold" color="gray.700" mb={2}>
-          Page Under Development
-        </Text>
-        <Text fontSize="lg" color="gray.500">
-          We’re working hard to bring you this page. Check back soon!
-        </Text>
+        <Heading mb={8}>Men's Collection</Heading>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6} width="100%">
+          {/* Replace these with actual product cards or components */}
+          <Box border="1px solid gray" padding="4">
+            <Text>Men's Item 1</Text>
+          </Box>
+          <Box border="1px solid gray" padding="4">
+            <Text>Men's Item 2</Text>
+          </Box>
+          <Box border="1px solid gray" padding="4">
+            <Text>Men's Item 3</Text>
+          </Box>
+        </SimpleGrid>
       </Box>
-    </Box>
+    </>
   );
 }

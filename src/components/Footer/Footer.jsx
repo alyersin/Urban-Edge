@@ -61,6 +61,7 @@ export default function Footer() {
         justifyContent="center"
         alignItems="center"
         maxWidth="1280px"
+        fontSize="sm"
         mx="auto"
         py="7"
         px={{ base: "10px", md: "40px" }}

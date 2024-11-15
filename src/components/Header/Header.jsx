@@ -128,7 +128,7 @@ export default function Header() {
               </Link>
             </Tooltip>
             <Tooltip label="Cart" hasArrow placement="bottom" openDelay={400}>
-              <Link href="/Pages/Cart">
+              <Link href="/Pages/ShoppingCart">
                 <Icon as={AiOutlineShoppingCart} boxSize={5} />
               </Link>
             </Tooltip>
