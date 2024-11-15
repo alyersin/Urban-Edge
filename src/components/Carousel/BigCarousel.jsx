@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useState, useRef } from "react";
 
-export default function Carousel({ images }) {
+export default function BigCarousel({ images }) {
   const [slideIndex, setSlideIndex] = useState(0);
   const sliderRef = useRef(null);
 

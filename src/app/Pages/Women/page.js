@@ -1,7 +1,7 @@
 "use client";
 import BlackBar from "@/components/BlackBar/BlackBar.jsx";
 
-import Carousel from "@/components/Carousel/Carousel.jsx";
+import BigCarousel from "@/components/Carousel/BigCarousel.jsx";
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
 export default function Women() {
@@ -30,7 +30,7 @@ export default function Women() {
     <>
       <Box>
         <BlackBar />
-        <Carousel images={images} />
+        <BigCarousel images={images} />
       </Box>
       <Box
         display="flex"

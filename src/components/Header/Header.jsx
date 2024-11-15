@@ -69,13 +69,13 @@ export default function Header() {
                 </Link>
               </Tab>
             </TabList>
-            <TabIndicator
+            {/* <TabIndicator
               position="absolute"
               bottom="-10px"
               height="2px"
               bg="black"
               borderRadius="md"
-            />
+            /> */}
           </Tabs>
 
           {/* CENTER LOGO */}
