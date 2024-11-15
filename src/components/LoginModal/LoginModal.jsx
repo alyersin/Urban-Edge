@@ -42,7 +42,7 @@ export default function LoginModal({ isOpen, onClose }) {
           <Tabs isFitted variant="enclosed">
             <TabList mb="4">
               <Tab fontWeight="bold">SIGN IN</Tab>
-              <Tab fontWeight="bold">I'M NEW HERE</Tab>
+              <Tab fontWeight="bold">I&apos;M NEW HERE</Tab>
             </TabList>
 
             <TabPanels>
@@ -136,7 +136,7 @@ export default function LoginModal({ isOpen, onClose }) {
                   <Text textAlign="left" fontSize="xs" color="gray.500">
                     By registering, you agree to our{" "}
                     <Link href="#" color="blue.500" isExternal>
-                      Terms & Conditions
+                      Terms &amp; Conditions
                     </Link>
                     ,{" "}
                     <Link href="#" color="blue.500" isExternal>
