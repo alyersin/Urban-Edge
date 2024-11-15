@@ -91,10 +91,10 @@ export default function Footer() {
         fontSize="xs"
         mt={4}
       >
-        'URBAN EDGE' and the 'URBAN EDGE' logo are trademarks of URBAN EDGE RO
-        Limited and are registered in numerous jurisdictions around the world. ©
-        Copyright {new Date().getFullYear()} URBAN EDGE RO Limited. All rights
-        reserved.
+        &apos;URBAN EDGE&apos; and the &apos;URBAN EDGE&apos; logo are
+        trademarks of URBAN EDGE RO Limited and are registered in numerous
+        jurisdictions around the world. &copy; Copyright{" "}
+        {new Date().getFullYear()} URBAN EDGE RO Limited. All rights reserved.
       </Text>
     </Box>
   );

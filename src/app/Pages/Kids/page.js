@@ -20,17 +20,17 @@ export default function Women() {
         textAlign="center"
         py={8}
       >
-        <Heading mb={8}>Kids's Collection</Heading>
+        <Heading mb={8}>Kids&apos;s Collection</Heading>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6} width="100%">
           {/* Replace these with actual product cards or components */}
           <Box border="1px solid gray" padding="4">
-            <Text>Kids's Item 1</Text>
+            <Text>Kids&apos;s Item 1</Text>
           </Box>
           <Box border="1px solid gray" padding="4">
-            <Text>Kids's Item 2</Text>
+            <Text>Kids&apos;s Item 2</Text>
           </Box>
           <Box border="1px solid gray" padding="4">
-            <Text>Kids's Item 3</Text>
+            <Text>Kids&apos;s Item 3</Text>
           </Box>
         </SimpleGrid>
       </Box>
