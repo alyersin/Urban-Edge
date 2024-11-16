@@ -21,9 +21,9 @@ export default function BlackBar() {
           alignItems="center"
           gap="300px"
         >
-          <Text fontSize="0.7rem">LIVRARE SI RETUR GRATUITE</Text>
-          <Text fontSize="0.7rem">30 DE ZILE DREPT DE RETUR</Text>
-          <Text fontSize="0.7rem">PLATA RAMBURS</Text>
+          <Text fontSize="0.7rem">FREE DELIVERY AND RETURNS</Text>
+          <Text fontSize="0.7rem">30 DAYS RIGHT OF RETURN</Text>
+          <Text fontSize="0.7rem">CASH ON DELIVERY</Text>
         </Box>
       </Box>
     </div>

@@ -8,7 +8,7 @@ export default function BigCarousel({ images }) {
   const [slideIndex, setSlideIndex] = useState(0);
   const sliderRef = useRef(null);
 
-  // Settings for react-slick
+  // Settings
   const settings = {
     dots: false,
     infinite: true,
@@ -24,10 +24,10 @@ export default function BigCarousel({ images }) {
   return (
     <Box
       position="relative"
-      width="100vw" // Full viewport width
-      height="80vh" // Adjusted to 80% of viewport height
+      width="100vw"
+      height="80vh"
       mx="0"
-      overflow="hidden" // Prevent overflow scrolling
+      overflow="hidden"
     >
       <Slider {...settings} ref={sliderRef}>
         {images.map((image, index) => (
@@ -38,16 +38,19 @@ export default function BigCarousel({ images }) {
               alt={`carousel-image-${index}`}
               width="100%"
               height="100%"
-              objectFit="contain" // Keep the full image visible without cropping or stretching
+              objectFit="cover"
               mx="auto"
+              draggable="false"
             />
             <Box
               position="absolute"
-              bottom="20%"
-              left="10%"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
               color="white"
-              textAlign="left"
+              textAlign="center"
               maxWidth="300px"
+              zIndex="10"
             >
               <Text fontSize="sm" mb={2}>
                 {image.captionSmall}
@@ -55,7 +58,15 @@ export default function BigCarousel({ images }) {
               <Text fontSize="4xl" fontWeight="bold" mb={4}>
                 {image.captionLarge}
               </Text>
-              <Button colorScheme="whiteAlpha" variant="outline" size="lg">
+              <Button
+                variant="outline"
+                size="lg"
+                fontSize="1rem"
+                bg="white"
+                color="black"
+                outline="none"
+                border="none"
+              >
                 {image.buttonText || "Explorează"}
               </Button>
             </Box>

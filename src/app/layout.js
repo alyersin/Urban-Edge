@@ -10,20 +10,19 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{ overflowX: "hidden", margin: 0 }}>
         {" "}
-        {/* Prevents horizontal scrolling */}
         <ChakraProvider>
           <Box minHeight="100vh" display="flex" flexDirection="column">
             <Header />
             <Box
               as="main"
               flex="1"
-              width="100vw" // Full viewport width to avoid restricting the carousel
-              mx="0" // Remove horizontal margin
-              px={0} // Remove padding to avoid overflow
+              width="100vw"
+              mx="0"
+              px={0}
               py={0}
-              overflowX="hidden" // Prevent any horizontal overflow
+              overflowX="hidden"
             >
-              {children} {/* Page-specific content goes here */}
+              {children}
             </Box>
             <Footer />
           </Box>

@@ -1,15 +1,39 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, Link, Image } from "@chakra-ui/react";
 import SmallCarousel from "@/components/Carousel/SmallCarousel.jsx";
-import InfoCard from "@/components/InfoCard/InfoCard";
+import InfoCard from "@/components/Cards/InfoCard";
 import { FaShoppingBag, FaQuestionCircle, FaComments } from "react-icons/fa";
+import Slider from "@/components/Carousel/Slider";
 
 const images = [
-  { src: "/assets/womenswear.jpg", alt: "Womenswear" },
-  { src: "/assets/menswear.jpg", alt: "Menswear" },
-  { src: "/assets/kidswear.jpg", alt: "Kidswear" },
-  { src: "/assets/womenswear.jpg", alt: "Womenswear" },
-  { src: "/assets/menswear.jpg", alt: "Menswear" },
-  { src: "/assets/kidswear.jpg", alt: "Kidswear" },
+  { src: "/assets/small-carousel/mode-lane.png", alt: "mode-lane" },
+  { src: "/assets/small-carousel/neon-vogue.png", alt: "neon-vogue" },
+  { src: "/assets/small-carousel/nexis.png", alt: "nexis" },
+  { src: "/assets/small-carousel/origo.png", alt: "origo" },
+  { src: "/assets/small-carousel/veloria.png", alt: "veloria" },
+  { src: "/assets/small-carousel/zyra.png", alt: "zyra" },
+];
+
+const sliderImages = [
+  {
+    default: "/assets/Slider/geaca1.avif",
+    hover: "/assets/Slider/geaca2.avif",
+    alt: "geaca 1",
+  },
+  {
+    default: "/assets/Slider/geaca3.avif",
+    hover: "/assets/Slider/geaca4.avif",
+    alt: "geaca 2",
+  },
+  {
+    default: "/assets/Slider/geaca5.avif",
+    hover: "/assets/Slider/geaca6.avif",
+    alt: "geaca 3",
+  },
+  {
+    default: "/assets/Slider/geaca7.avif",
+    hover: "/assets/Slider/geaca8.avif",
+    alt: "geaca 4",
+  },
 ];
 
 export default function Home() {
@@ -25,8 +49,21 @@ export default function Home() {
       textAlign="center"
       p={4}
     >
+      {/* Promo Image */}
+      <Link>
+        <Image
+          src="/assets/homepage/adidas.jpg"
+          alt="Adidas Promo"
+          draggable="false"
+        />
+      </Link>
+
+      {/* SmallCarousel */}
       <SmallCarousel items={images} />
 
+      <Slider items={sliderImages} />
+
+      {/* Information Cards */}
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
         spacing={6}

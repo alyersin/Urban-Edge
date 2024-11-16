@@ -139,12 +139,51 @@ export default function Header() {
         <Box
           // border="1px solid black"
           display="flex"
-          justifyContent="flex-end"
+          justifyContent="space-between"
+          alignItems="center"
           maxWidth="1280px"
           mx="auto"
           paddingX={{ base: "10px", md: "40px" }}
           mt="10px"
         >
+          <Tabs>
+            <TabList display="flex" flexDirection="row">
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Sale</Link>
+              </Tab>
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Gifts</Link>
+              </Tab>
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Brands</Link>
+              </Tab>
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Clothing</Link>
+              </Tab>
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Shoes</Link>
+              </Tab>
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Bags</Link>
+              </Tab>{" "}
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Accessories</Link>
+              </Tab>{" "}
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Jewellery</Link>
+              </Tab>{" "}
+              <Tab fontSize="sm" bg="white">
+                <Link href="">Homeware</Link>
+              </Tab>
+            </TabList>
+            {/* <TabIndicator
+              mt="-2px" 
+              height="2px"
+              bg="black" 
+              borderRadius="md"
+            /> */}
+          </Tabs>
+
           <InputGroup width="260px">
             <InputLeftElement pointerEvents="none">
               <SearchIcon color="gray.400" />
