@@ -3,12 +3,14 @@ import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
 import Slider from "react-slick";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 export default function BigCarousel({ images }) {
   const [slideIndex, setSlideIndex] = useState(0);
   const sliderRef = useRef(null);
+  const router = useRouter(); // Next.js router for navigation
 
-  // Settings
+  // Slider settings
   const settings = {
     dots: false,
     infinite: true,
@@ -66,6 +68,7 @@ export default function BigCarousel({ images }) {
                 color="black"
                 outline="none"
                 border="none"
+                onClick={() => router.push(image.href || "#")}
               >
                 {image.buttonText || "Explorează"}
               </Button>

@@ -9,20 +9,23 @@ export default function Men() {
     {
       src: "/assets/men/carousel-1.avif",
       captionSmall: "LA INTERSECȚIA DINTRE LUX ȘI RELAXARE",
-      captionLarge: "Pregătită pentru orice ocazie",
+      captionLarge: "Pregătit pentru orice ocazie",
       buttonText: "Explorează",
+      href: "/Pages/Men/MenItems/",
     },
     {
       src: "/assets/men/carousel-2.avif",
       captionSmall: "STIL ȘI COMFORT",
       captionLarge: "Piese esențiale pentru orice garderobă",
       buttonText: "Explorează",
+      href: "/Pages/Men/MenItems/",
     },
     {
       src: "/assets/men/carousel-3.avif",
       captionSmall: "MODERNITATE ȘI ELEGANȚĂ",
       captionLarge: "Descoperă noua colecție de toamnă!",
       buttonText: "Explorează",
+      href: "/Pages/Men/MenItems/",
     },
   ];
 

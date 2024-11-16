@@ -11,18 +11,21 @@ export default function Women() {
       captionSmall: "LA INTERSECȚIA DINTRE LUX ȘI RELAXARE",
       captionLarge: "Pregătită pentru orice ocazie",
       buttonText: "Explorează",
+      href: "/Pages/Women/WomenItems/",
     },
     {
       src: "/assets/women/carousel-10.avif",
       captionSmall: "STIL ȘI COMFORT",
       captionLarge: "Piese esențiale pentru orice garderobă",
       buttonText: "Explorează",
+      href: "/Pages/Women/WomenItems/",
     },
     {
       src: "/assets/women/carousel-9.avif",
       captionSmall: "MODERNITATE ȘI ELEGANȚĂ",
       captionLarge: "Descoperă noua colecție de toamnă!",
       buttonText: "Explorează",
+      href: "/Pages/Women/WomenItems/",
     },
   ];
 
@@ -30,7 +33,7 @@ export default function Women() {
     <>
       <Box>
         <BlackBar />
-        <BigCarousel images={images} />
+        <BigCarousel images={images} href="/Pages/Womnen/WomenItems/" />
       </Box>
       <Box
         display="flex"

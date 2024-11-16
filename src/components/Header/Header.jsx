@@ -149,31 +149,31 @@ export default function Header() {
           <Tabs>
             <TabList display="flex" flexDirection="row">
               <Tab fontSize="sm" bg="white">
-                <Link href="">Sale</Link>
+                <Link href="/Pages/NavList/Sale/">Sale</Link>
               </Tab>
               <Tab fontSize="sm" bg="white">
-                <Link href="">Gifts</Link>
+                <Link href="/Pages/NavList/Gifts/">Gifts</Link>
               </Tab>
               <Tab fontSize="sm" bg="white">
-                <Link href="">Brands</Link>
+                <Link href="/Pages/NavList/Brands/">Brands</Link>
               </Tab>
               <Tab fontSize="sm" bg="white">
-                <Link href="">Clothing</Link>
+                <Link href="/Pages/NavList/Clothing/">Clothing</Link>
               </Tab>
               <Tab fontSize="sm" bg="white">
-                <Link href="">Shoes</Link>
+                <Link href="/Pages/NavList/Shoes/">Shoes</Link>
               </Tab>
               <Tab fontSize="sm" bg="white">
-                <Link href="">Bags</Link>
+                <Link href="/Pages/NavList/Bags/">Bags</Link>
               </Tab>{" "}
               <Tab fontSize="sm" bg="white">
-                <Link href="">Accessories</Link>
+                <Link href="/Pages/NavList/Accessories/">Accessories</Link>
               </Tab>{" "}
               <Tab fontSize="sm" bg="white">
-                <Link href="">Jewellery</Link>
+                <Link href="/Pages/NavList/Jewellery/">Jewellery</Link>
               </Tab>{" "}
               <Tab fontSize="sm" bg="white">
-                <Link href="">Homeware</Link>
+                <Link href="/Pages/NavList/Homeware/">Homeware</Link>
               </Tab>
             </TabList>
             {/* <TabIndicator
