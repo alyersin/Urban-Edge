@@ -52,7 +52,7 @@ export default function Home() {
       {/* Promo Image */}
       <Link>
         <Image
-          src="/assets/homepage/adidas.jpg"
+          src="/assets/homepage/adidas.avif"
           alt="Adidas Promo"
           draggable="false"
         />
