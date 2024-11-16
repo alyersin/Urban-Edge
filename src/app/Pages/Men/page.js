@@ -7,19 +7,19 @@ import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 export default function Men() {
   const images = [
     {
-      src: "/assets/men/carousel-1.jpg",
+      src: "/assets/men/carousel-1.avif",
       captionSmall: "LA INTERSECȚIA DINTRE LUX ȘI RELAXARE",
       captionLarge: "Pregătită pentru orice ocazie",
       buttonText: "Explorează",
     },
     {
-      src: "/assets/men/carousel-2.jpg",
+      src: "/assets/men/carousel-2.avif",
       captionSmall: "STIL ȘI COMFORT",
       captionLarge: "Piese esențiale pentru orice garderobă",
       buttonText: "Explorează",
     },
     {
-      src: "/assets/men/carousel-3.jpg",
+      src: "/assets/men/carousel-3.avif",
       captionSmall: "MODERNITATE ȘI ELEGANȚĂ",
       captionLarge: "Descoperă noua colecție de toamnă!",
       buttonText: "Explorează",

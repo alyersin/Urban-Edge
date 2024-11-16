@@ -7,19 +7,19 @@ import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 export default function Women() {
   const images = [
     {
-      src: "/assets/women/carousel-8.jpg",
+      src: "/assets/women/carousel-8.avif",
       captionSmall: "LA INTERSECȚIA DINTRE LUX ȘI RELAXARE",
       captionLarge: "Pregătită pentru orice ocazie",
       buttonText: "Explorează",
     },
     {
-      src: "/assets/women/carousel-10.jpg",
+      src: "/assets/women/carousel-10.avif",
       captionSmall: "STIL ȘI COMFORT",
       captionLarge: "Piese esențiale pentru orice garderobă",
       buttonText: "Explorează",
     },
     {
-      src: "/assets/women/carousel-9.jpg",
+      src: "/assets/women/carousel-9.avif",
       captionSmall: "MODERNITATE ȘI ELEGANȚĂ",
       captionLarge: "Descoperă noua colecție de toamnă!",
       buttonText: "Explorează",
