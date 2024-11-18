@@ -1,6 +1,6 @@
 # UrbanEdge - [https://urban-edge-rho.vercel.app/](https://urban-edge-rho.vercel.app/)
 
-<img src="./public/screenshot.jpg" alt="Screenshot of UrbanEdge" width="500"/>
+<img src="./public/screenshot.png" alt="Screenshot of UrbanEdge" width="500"/>
 
 UrbanEdge is a web-based shopping platform developed with Next.js and integrated with MongoDB. It allows users to browse products, save items to favorites, explore categories, and enjoy a personalized shopping experience.
 
