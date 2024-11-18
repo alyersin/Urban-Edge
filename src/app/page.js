@@ -1,7 +1,7 @@
 import { Box, SimpleGrid, Link, Image, Text, Heading } from "@chakra-ui/react";
+import { FaShoppingBag, FaQuestionCircle, FaComments } from "react-icons/fa";
 import SmallCarousel from "@/components/Carousel/SmallCarousel.jsx";
 import InfoCard from "@/components/Cards/InfoCard";
-import { FaShoppingBag, FaQuestionCircle, FaComments } from "react-icons/fa";
 import Slider from "@/components/Carousel/Slider";
 import TermsBar from "@/components/TermsBar/TermsBar";
 
@@ -14,7 +14,7 @@ const images = [
   { src: "/assets/small-carousel/zyra.png", alt: "zyra" },
 ];
 
-const sliderImages = [
+const winterOutfits = [
   {
     default: "/assets/Slider/geaca1.avif",
     hover: "/assets/Slider/geaca2.avif",
@@ -45,7 +45,36 @@ const sliderImages = [
   },
 ];
 
-const termsContent = [{}, {}, {}];
+const trendingImages = [
+  {
+    default: "/assets/Slider/trending1.avif",
+    hover: "/assets/Slider/trending2.avif",
+    alt: "trending 1",
+    brand: "BRAND 2",
+    price: "38",
+  },
+  {
+    default: "/assets/Slider/trending3.avif",
+    hover: "/assets/Slider/trending4.jpg",
+    alt: "trending 2",
+    brand: "BRAND 2",
+    price: "69",
+  },
+  {
+    default: "/assets/Slider/trending5.avif",
+    hover: "/assets/Slider/trending6.avif",
+    alt: "trending 3",
+    brand: "BRAND 2",
+    price: "98",
+  },
+  {
+    default: "/assets/Slider/trending7.avif",
+    hover: "/assets/Slider/trending8.avif",
+    alt: "trending 4",
+    brand: "BRAND 2",
+    price: "124",
+  },
+];
 
 export default function Home() {
   return (
@@ -75,7 +104,7 @@ export default function Home() {
         Winter outfits
       </Heading>
 
-      <Slider items={sliderImages} />
+      <Slider items={winterOutfits} />
 
       <Heading size="md" fontWeight="medium">
         Autumn Sales!
@@ -119,7 +148,7 @@ export default function Home() {
         Trending
       </Heading>
 
-      <Slider items={sliderImages} />
+      <Slider items={trendingImages} />
 
       <TermsBar
         items={[
@@ -128,8 +157,9 @@ export default function Home() {
           "CUSTOMER SUPPORT 24/7",
         ]}
         bg="#FFEBB7"
+        x
         color="black"
-        height="80px"
+        height="74px"
         fontSize="0.7rem"
       />
 
