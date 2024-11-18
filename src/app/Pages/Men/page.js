@@ -1,8 +1,9 @@
 "use client";
-import BlackBar from "@/components/BlackBar/BlackBar.jsx";
+import BlackBar from "@/components/TermsBar/TermsBar.jsx";
 import BigCarousel from "@/components/Carousel/BigCarousel.jsx";
 
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import TermsBar from "@/components/TermsBar/TermsBar.jsx";
 
 export default function Men() {
   const images = [
@@ -32,7 +33,13 @@ export default function Men() {
   return (
     <>
       <Box>
-        <BlackBar />
+        <TermsBar
+          items={[
+            "FREE DELIVERY AND RETURNS",
+            "30 DAYS RIGHT OF RETURN",
+            "CASH ON DELIVERY",
+          ]}
+        />
         <BigCarousel images={images} />
       </Box>
       <Box

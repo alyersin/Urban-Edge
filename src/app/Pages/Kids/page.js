@@ -1,5 +1,6 @@
 "use client";
-import BlackBar from "@/components/BlackBar/BlackBar.jsx";
+import TermsBar from "@/components/TermsBar/TermsBar.jsx";
+import BlackBar from "@/components/TermsBar/TermsBar.jsx";
 
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 
@@ -7,7 +8,13 @@ export default function Women() {
   return (
     <>
       <Box>
-        <BlackBar />
+        <TermsBar
+          items={[
+            "FREE DELIVERY AND RETURNS",
+            "30 DAYS RIGHT OF RETURN",
+            "CASH ON DELIVERY",
+          ]}
+        />
       </Box>
       <Box
         display="flex"

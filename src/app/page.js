@@ -1,8 +1,9 @@
-import { Box, SimpleGrid, Link, Image } from "@chakra-ui/react";
+import { Box, SimpleGrid, Link, Image, Text, Heading } from "@chakra-ui/react";
 import SmallCarousel from "@/components/Carousel/SmallCarousel.jsx";
 import InfoCard from "@/components/Cards/InfoCard";
 import { FaShoppingBag, FaQuestionCircle, FaComments } from "react-icons/fa";
 import Slider from "@/components/Carousel/Slider";
+import TermsBar from "@/components/TermsBar/TermsBar";
 
 const images = [
   { src: "/assets/small-carousel/mode-lane.png", alt: "mode-lane" },
@@ -18,23 +19,33 @@ const sliderImages = [
     default: "/assets/Slider/geaca1.avif",
     hover: "/assets/Slider/geaca2.avif",
     alt: "geaca 1",
+    brand: "BRAND 1",
+    price: "149",
   },
   {
     default: "/assets/Slider/geaca3.avif",
     hover: "/assets/Slider/geaca4.avif",
     alt: "geaca 2",
+    brand: "BRAND 2",
+    price: "119",
   },
   {
     default: "/assets/Slider/geaca5.avif",
     hover: "/assets/Slider/geaca6.avif",
     alt: "geaca 3",
+    brand: "BRAND 3",
+    price: "64",
   },
   {
     default: "/assets/Slider/geaca7.avif",
     hover: "/assets/Slider/geaca8.avif",
     alt: "geaca 4",
+    brand: "BRAND 4",
+    price: "89",
   },
 ];
+
+const termsContent = [{}, {}, {}];
 
 export default function Home() {
   return (
@@ -49,7 +60,7 @@ export default function Home() {
       textAlign="center"
       p={4}
     >
-      {/* Promo Image */}
+      {/* PROMO */}
       <Link>
         <Image
           src="/assets/homepage/adidas.avif"
@@ -57,17 +68,77 @@ export default function Home() {
           draggable="false"
         />
       </Link>
-
       {/* SmallCarousel */}
       <SmallCarousel items={images} />
 
+      <Heading size="md" fontWeight="medium">
+        Winter outfits
+      </Heading>
+
       <Slider items={sliderImages} />
+
+      <Heading size="md" fontWeight="medium">
+        Autumn Sales!
+      </Heading>
+
+      {/* Sale Promo with SALE 20% Text */}
+      <Box
+        position="relative"
+        width="100%"
+        textAlign="center"
+        padding="0 0 40px 0"
+      >
+        <Link>
+          {/* Sale Image */}
+          <Image
+            src="/assets/homepage/sale.jpg"
+            alt="Sale Promo"
+            draggable="false"
+          />
+
+          {/* Sale Text Overlay */}
+          <Text
+            position="absolute"
+            top="10px"
+            left="10px"
+            bg="red.500"
+            color="white"
+            fontWeight="bold"
+            fontSize="lg"
+            px={3}
+            py={2}
+            borderRadius="md"
+            boxShadow="md"
+          >
+            SALE 20%
+          </Text>
+        </Link>
+      </Box>
+
+      <Heading size="md" fontWeight="medium">
+        Trending
+      </Heading>
+
+      <Slider items={sliderImages} />
+
+      <TermsBar
+        items={[
+          "FREE SHIPPING WORLDWIDE",
+          "EASY RETURNS",
+          "CUSTOMER SUPPORT 24/7",
+        ]}
+        bg="#FFEBB7"
+        color="black"
+        height="80px"
+        fontSize="0.7rem"
+      />
 
       {/* Information Cards */}
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
-        spacing={6}
+        spacing={10}
         justifyItems="center"
+        paddingY={8}
       >
         <InfoCard
           href="/Pages/Information/How-to-shop/"

@@ -7,11 +7,25 @@ import {
   Text,
   Button,
   Divider,
+  IconButton,
 } from "@chakra-ui/react";
+import { CloseIcon } from "@chakra-ui/icons";
 
-export default function Item({ item, quantity, onMoveToWishlist }) {
+export default function Item({ item, quantity, onMoveToWishlist, onRemove }) {
   return (
-    <Box>
+    <Box position="relative">
+      {/* Remove Button */}
+      <IconButton
+        icon={<CloseIcon />}
+        aria-label="Remove item"
+        position="absolute"
+        top="0"
+        right="0"
+        size="xs"
+        colorScheme="red"
+        onClick={() => onRemove(item.id)}
+      />
+
       <Divider my={5} />
       <Flex direction="column" mb={5}>
         <Flex align="center">
@@ -19,7 +33,7 @@ export default function Item({ item, quantity, onMoveToWishlist }) {
           <VStack align="start" spacing={1}>
             <Text fontWeight="bold">{item.brand}</Text>
             <Text>{item.name}</Text>
-            <Text color="gray.500">FARFETCH ID: {item.id}</Text>
+            <Text color="gray.500">URBAN EDGE ID: {item.id}</Text>
             <Text color="red.500" fontWeight="bold">
               Last 1 left
             </Text>

@@ -1,29 +1,33 @@
 "use client";
 import { Box, VStack, Flex, Text, Divider, Button } from "@chakra-ui/react";
 
-export default function CartSummary({ itemPrice, quantity, deliveryFee }) {
-  const totalPrice = itemPrice * quantity + deliveryFee;
+export default function CartSummary({ items, quantities, deliveryFee }) {
+  const subtotal = items.reduce(
+    (total, item) => total + item.price * (quantities[item.id] || 0),
+    0
+  );
+  const totalPrice = subtotal + deliveryFee;
 
   return (
-    <Box>
-      <VStack spacing={3} align="stretch">
+    <Box width="70%">
+      <VStack spacing={4} align="stretch">
         <Flex justify="space-between">
           <Text>Subtotal:</Text>
-          <Text>{itemPrice * quantity} €</Text>
+          <Text>{subtotal.toFixed(2)} €</Text>
         </Flex>
         <Flex justify="space-between">
           <Text>Delivery:</Text>
-          <Text>{deliveryFee} €</Text>
+          <Text>{deliveryFee.toFixed(2)} €</Text>
         </Flex>
         <Divider />
         <Flex justify="space-between" fontWeight="bold">
           <Text>Total:</Text>
-          <Text>{totalPrice} €</Text>
+          <Text>{totalPrice.toFixed(2)} €</Text>
         </Flex>
         <Text color="gray.500" fontSize="sm">
           VAT included
         </Text>
-        <Button colorScheme="blackAlpha" variant="solid" size="lg">
+        <Button colorScheme="blackAlpha" variant="solid" size="lg" bg="black">
           Go To Checkout
         </Button>
       </VStack>
