@@ -1,0 +1,79 @@
+[
+    {
+      "id": 1,
+      "name": "Kids Jacket",
+      "price": 150,
+      "image": "/assets/kids/kids-1.avif",
+      "isNew": true,
+      "category": "Outerwear",
+      "sizes": ["S", "M", "L"],
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "Kids Shoes",
+      "price": 200,
+           "image": "/assets/kids/kids-2.avif",
+
+      "isNew": false,
+      "category": "Footwear",
+      "sizes": ["30", "32", "34"],
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "Kids Shirt",
+      "price": 100,
+           "image": "/assets/kids/kids-3.avif",
+
+      "isNew": true,
+      "category": "Tops",
+      "sizes": ["S", "M", "L"],
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "name": "Kids Shorts",
+      "price": 80,
+          "image": "/assets/kids/kids-4.avif",
+
+      "isNew": false,
+      "category": "Bottoms",
+      "sizes": ["S", "M", "L"],
+      "stock": 20
+    },
+    {
+      "id": 5,
+      "name": "Kids Shorts",
+      "price": 80,
+         "image": "/assets/kids/kids-5.avif",
+
+      "isNew": false,
+      "category": "Bottoms",
+      "sizes": ["S", "M", "L"],
+      "stock": 20
+    },
+    {
+      "id": 6,
+      "name": "Kids Shorts",
+      "price": 80,
+          "image": "/assets/kids/kids-6.avif",
+
+      "isNew": false,
+      "category": "Bottoms",
+      "sizes": ["S", "M", "L"],
+      "stock": 20
+    },
+    {
+      "id": 7,
+      "name": "Kids Shorts",
+      "price": 80,
+       "image": "/assets/kids/kids-7.avif",
+
+      "isNew": false,
+      "category": "Bottoms",
+      "sizes": ["S", "M", "L"],
+      "stock": 20
+    }
+  ]
+  

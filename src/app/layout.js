@@ -8,7 +8,14 @@ import "./globals.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{ overflowX: "hidden", margin: 0 }}>
+      <body
+        style={{
+          overflowX: "hidden",
+          margin: 0,
+          boxSizing: "border-box",
+          alignItems: "center",
+        }}
+      >
         {" "}
         <ChakraProvider>
           <Box minHeight="100vh" display="flex" flexDirection="column">
