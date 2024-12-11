@@ -32,7 +32,6 @@ export default function ShoppingCartPage() {
 
       setCartItems(items);
 
-      // Initialize quantities for each item
       const initialQuantities = {};
       items.forEach((item) => {
         initialQuantities[item.id] = 1;
@@ -48,10 +47,8 @@ export default function ShoppingCartPage() {
   };
 
   const removeItem = (id) => {
-    // Remove item from cart
     setCartItems((prev) => prev.filter((item) => item.id !== id));
 
-    // Remove the corresponding quantity
     setQuantities((prev) => {
       const updatedQuantities = { ...prev };
       delete updatedQuantities[id];
@@ -84,7 +81,6 @@ export default function ShoppingCartPage() {
         gap="36px"
         width="100%"
       >
-        {/* Items Section */}
         <Box flex="2">
           {cartItems.map((item) => (
             <Item
@@ -100,7 +96,6 @@ export default function ShoppingCartPage() {
           ))}
         </Box>
 
-        {/* Summary Section */}
         <Box
           display="flex"
           flexDirection="column"
